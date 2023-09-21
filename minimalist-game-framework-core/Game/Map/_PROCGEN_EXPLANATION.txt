@@ -1,0 +1,7 @@
+Procedural generation is setup thusly:
+
+- The MAPMANAGER handles the generation of each tile according to procedural noise algorithms; it also handles the rendering and fetching of individual tiles and miscellaneous logistical 
+tasks related to the tilemap (including parsing the real-space coordinates of each)
+- the BIOMEMANAGER is a simple static utility class to store the information for each individual biome and help with biome determination and property fetching
+- the MAPTILE represents the x and y coordinates of a given tile as well as what biome type it is
+- the TILEATTRIBUTES class is a collection of attributes that all tiles share in common. Can be extended later for special tile types.

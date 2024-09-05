@@ -1,12 +1,4 @@
-﻿/*
- * Kirill Obraztsov
- * 
- * Used by menus as interactible components
- * 
- * 11/22/2022
- * 
-*/
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 class Button
@@ -40,7 +32,7 @@ class Button
         name = nameIn;
         if (mouseOverTextIn != null)
         {
-            mouseOverText = (string[]) mouseOverTextIn.Clone();
+            mouseOverText = (string[])mouseOverTextIn.Clone();
         }
         customButtonTex = customButtonTexIn;
         customButtonHoverTex = customButtonHoverTexIn;
@@ -57,9 +49,10 @@ class Button
     public bool getLock() { return locked; }
 
     // set methods
-    public void setOffset(Vector2 newOffset) 
-    { 
-        if (!locked) {
+    public void setOffset(Vector2 newOffset)
+    {
+        if (!locked)
+        {
             offset = newOffset;
         }
     }
@@ -90,8 +83,9 @@ class Button
                     {
                         renderMouseOver();
                     }
-                    
-                } else
+
+                }
+                else
                 // draws the non-hovered custom texture
                 {
                     Engine.DrawResizableTexture(customButtonTex, new Bounds2(pos, size), null, TextureBlendMode.Normal, TextureScaleMode.Nearest);
@@ -105,12 +99,13 @@ class Button
                     // draw hover texture and mouseover on collision
                     Engine.DrawResizableTexture(MenuManager.buttonHoverTex, bound, null, TextureBlendMode.Normal, TextureScaleMode.Nearest);
                     renderName();
-                    
+
                     if (mouseOverText != null)
                     {
                         renderMouseOver();
                     }
-                } else
+                }
+                else
                 // draws normal texture
                 {
                     Engine.DrawResizableTexture(MenuManager.buttonTex, bound, null, TextureBlendMode.Normal, TextureScaleMode.Nearest);
@@ -138,7 +133,7 @@ class Button
     // renders the mouseover text for the button
     private void renderMouseOver()
     {
-        MenuManager.makeMouseOver(mouseOverText); 
+        MenuManager.makeMouseOver(mouseOverText);
     }
 
     // gets whether the button was interacted with

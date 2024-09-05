@@ -1,12 +1,4 @@
-﻿/*
- * Kirill Obraztsov
- * 
- * Used by menus as static components
- * 
- * 11/20/2022
- * 
-*/
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 class Image
@@ -78,7 +70,8 @@ class Image
             if (factionOverwrite)
             {
                 useColor = FactionManager.getFactionColor(GameManager.currentFaction);
-            } else
+            }
+            else
             {
                 useColor = Color.White;
             }

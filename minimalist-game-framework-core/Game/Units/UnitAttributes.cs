@@ -5,7 +5,6 @@ using System.ComponentModel.Design.Serialization;
 public class UnitAttributes
 {
 
-    //What's the interval of generation for this type of tile?
     public int attackPoints;
     public int healthPoints;
     public int mobility;

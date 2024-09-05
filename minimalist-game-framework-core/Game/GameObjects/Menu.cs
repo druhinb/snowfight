@@ -1,19 +1,11 @@
-﻿/*
- * Kirill Obraztsov
- * 
- * Menus that are used by MenuManager to store components and sort interactions
- * 
- * 11/21/2022
- * 
-*/
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 // menu objects
 class Menu
 {
     // textures
-    
+
     // attributes
     private List<Button> buttons = new List<Button>();
     private List<Image> images = new List<Image>();
@@ -41,7 +33,7 @@ class Menu
             images = imagesIn;
         }
         border = new MenuBorder(pos, size);
-               
+
     }
 
     // get methods
@@ -62,7 +54,7 @@ class Menu
     public void resetImages() { images = new List<Image>(); }
 
     // calculate new offset
-    public void offsetCalc(Vector2 prevMouse) 
+    public void offsetCalc(Vector2 prevMouse)
     {
         // unlock menu if not aligned, lock otherwise
         locked = border.updateConflicts(buttons, images);
